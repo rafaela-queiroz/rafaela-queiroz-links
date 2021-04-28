@@ -1,0 +1,155 @@
+:root {
+  --instagram : linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  --linkedin  : linear-gradient(90deg, #2867b2 0%, #06366f 100%);
+  --github    : linear-gradient(90deg, #030002 0%, #0a0f22 100%);
+  --portfolio : linear-gradient(90deg, #78f033 0%, rgb(128 217 174) 100%);
+  --pix       : linear-gradient(90deg, #4852c4 0%, #3e2d7f 100%);
+  --transition: 0.7s;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  display        : flex;
+  justify-content: flex-end;
+}
+
+section .iconify {
+  cursor   : pointer;
+  font-size: 25px;
+}
+
+header {
+  display        : flex;
+  align-items    : center;
+  margin-bottom  : 20px;
+  flex-direction : column;
+  justify-content: center;
+}
+
+header img {
+  width        : 200px;
+  margin       : 20px 0;
+  border-radius: 50%;
+}
+
+header h2 {
+  margin   : 5px;
+  font-size: 2em;
+}
+
+header span {
+  color     : #494949;
+  width     : max(300px, 50%);
+  margin    : auto;
+  text-align: center;
+}
+
+header span strong {
+  color           : #000;
+  background-color: #fffb00;
+}
+
+main {
+  display        : flex;
+  justify-content: center;
+}
+
+main section {
+  width  : max(300px, 50%);
+  display: block;
+}
+
+main section article {
+  margin        : 0 auto;
+  display       : flex;
+  max-width     : 600px;
+  justify-items : center;
+  flex-direction: column;
+}
+
+main section article a {
+  margin         : 7px 0;
+  transition     : var(--transition);
+  text-decoration: none;
+}
+
+main section article a:hover {
+  transform: scale(1.1);
+}
+
+main section article div {
+  display        : flex;
+  padding        : 4px;
+  align-items    : center;
+  border-radius  : 8px;
+  justify-content: center;
+}
+
+main section article div .iconify {
+  color       : #fff;
+  font-size   : 26px;
+  margin-right: 10px;
+}
+
+main section article div h3 {
+  color      : #fff;
+  font-size  : 16px;
+  text-align : center;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+main section article:is(.pix) {
+  margin       : 7px auto;
+  padding      : 7px 0;
+  border-radius: 8px;
+  background   : var(--pix);
+}
+
+main section article:is(.pix) div h3 {
+  margin: 5px 0;
+}
+
+main section article:is(.pix) div:last-child {
+  margin-bottom: 10px;
+}
+
+main section article:is(.pix) div:last-child input {
+  width                     : 80%;
+  border                    : 0;
+  outline                   : none;
+  padding                   : 6px;
+  font-size                 : 15px;
+  text-align                : center;
+  background                : #ffffff9c;
+  border-radius             : 3px;
+  border-top-right-radius   : 0;
+  border-bottom-right-radius: 0;
+}
+
+main section article:is(.pix) div:last-child button {
+  border                    : 0;
+  outline                   : none;
+  padding                   : 3px 8px;
+  transition                : var(--transition);
+  background-color          : #433e9f;
+  border-top-right-radius   : 3px;
+  border-bottom-right-radius: 3px;
+}
+
+main section article:is(.pix) div:last-child button:hover {
+  transform: scale(1.05);
+}
+
+main section article:is(.pix) div:last-child button .iconify {
+  margin   : 0;
+  font-size: 20px;
+}
+
+footer {
+  margin    : 25px;
+  text-align: center;
+}
